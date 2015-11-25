@@ -10,7 +10,7 @@ $fb = new Facebook\Facebook([
 
 try {
   $gitCommit = json_decode($_REQUEST['payload'], true);
-  $post = ['message' => $gitCommit['commits'][0]['message'] . '-' . $gitCommit['commits'][0]['url']];
+  $post = ['message' => $gitCommit['commits'][0]['timestamp'] . ': '. $gitCommit['commits'][0]['message'] . ' - '  . $gitCommit['commits'][0]['url']];
   $response = $fb->post('/me/feed', $post);
   
 } catch(Facebook\Exceptions\FacebookResponseException $e) {
