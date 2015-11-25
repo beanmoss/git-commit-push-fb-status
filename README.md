@@ -1,5 +1,5 @@
 # git-commit-push-fb-status
-Post fb status the developers way.
+Post fb status the developer way.
 
 #will post snippets soon.
 
